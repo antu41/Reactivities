@@ -23,6 +23,8 @@ public class EditActivity
 
             mapper.Map(request.Activity, activity);
 
+            activity.Date = DateTime.SpecifyKind(activity.Date, DateTimeKind.Utc);
+
             await context.SaveChangesAsync(cancellationToken);
         }
     }

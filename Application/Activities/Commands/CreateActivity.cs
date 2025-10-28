@@ -16,6 +16,8 @@ public class CreateActivity
     {
         public async Task<string> Handle(Command request, CancellationToken cancellationToken)
         {
+            request.Activity.Date = DateTime.SpecifyKind(request.Activity.Date, DateTimeKind.Utc);
+
             context.Activities.Add(request.Activity);
 
             await context.SaveChangesAsync(cancellationToken);
