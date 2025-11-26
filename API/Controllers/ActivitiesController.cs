@@ -39,7 +39,7 @@ public class ActivitiesController : BaseApiController
 
     }
 
-    [HttpDelete("{id}")] 
+    [HttpDelete("{id}")]
     [Authorize(Policy = "IsActivityHost")]
     public async Task<ActionResult<string>> DeleteActivity(string id)
     {
