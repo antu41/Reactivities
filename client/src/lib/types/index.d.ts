@@ -14,6 +14,7 @@ type Activity = {
   isHost: boolean;
   hostId: string;
   hostDisplayName: string;
+  hostImageUrl: string;
 };
 
 type Profile = {
@@ -22,6 +23,11 @@ type Profile = {
   bio?: string;
   imageUrl?: string;
   following?: boolean;
+};
+
+type Photo = {
+  id: string;
+  url: string;
 };
 
 type User = {
