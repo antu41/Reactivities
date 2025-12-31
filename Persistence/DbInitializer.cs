@@ -10,9 +10,9 @@ namespace Persistence
         {
             var users = new List<User>
                 {
-                    new(){DisplayName = "Rahim", UserName = "rahim@test.com", Email="rahim@test.com"},
-                    new(){DisplayName = "Karim", UserName = "karim@test.com", Email="karim@test.com"},
-                    new(){DisplayName = "Harun", UserName = "harun@test.com", Email="harun@test.com"},
+                    new(){Id="rahim-id", DisplayName = "Rahim", UserName = "rahim@test.com", Email="rahim@test.com"},
+                    new(){Id="karim-id", DisplayName = "Karim", UserName = "karim@test.com", Email="karim@test.com"},
+                    new(){Id="harun-id", DisplayName = "Harun", UserName = "harun@test.com", Email="harun@test.com"},
                 };
 
             if (!userManager.Users.Any())
