@@ -66,7 +66,7 @@ export default function ActivityForm() {
           }
         );
       } else {
-        createActivity.mutate(flattenedData as Activity, {
+        createActivity.mutate(flattenedData, {
           onSuccess: (id) => navigate(`/activities/${id}`),
         });
       }
@@ -115,7 +115,9 @@ export default function ActivityForm() {
         />
 
         <Box display={"flex"} justifyContent={"end"} gap={3}>
-          <Button color="inherit">Cancel</Button>
+          <Button onClick={() => navigate(-1)} color="inherit">
+            Cancel
+          </Button>
           <Button
             type="submit"
             color="success"
